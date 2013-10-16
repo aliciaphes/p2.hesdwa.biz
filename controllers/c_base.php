@@ -27,4 +27,7 @@ class base_controller {
 			
 	}
 	
+
+/**once your system has the ability to log in users, you don't want to repeat yourself in every Controller, checking to see if a user is logged in. Instead, you can do this action here in the base Controller.*/
+
 } # eoc
