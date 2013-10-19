@@ -7,8 +7,8 @@ header{
 
 
 body{
-	background-color: #A27B2B;
-	color: #F0F2F1;
+	background-color: #754541;	
+	color: #F0F2F1;		
 	font-family: 'Andika', Helvetica, sans-serif;
 }
 
@@ -16,7 +16,9 @@ body{
 .loginarea{
 	padding: 15px;
 	margin: 5px;	
-	background-color: #734240
+	background-color: #A27B2B;	
+	/*#734240*/
+
 }
 
 
