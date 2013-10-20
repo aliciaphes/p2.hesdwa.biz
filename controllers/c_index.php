@@ -21,17 +21,18 @@ class index_controller extends base_controller {
 		# Now set the <title> tag
 		$this->template->title = 'Welcome to Oonga Oonga';
 
-		# CSS/JS includes
+		/*
+		# CSS/JS includes -- piece moved to c_base.php
 		$client_files_head = Array('/css/mycss.css');
 		$this->template->client_files_head = Utils::load_client_files($client_files_head);
-		$this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>";
-	    	/*
-	    	$client_files_body = Array("");
-	    	$this->template->client_files_body = Utils::load_client_files($client_files_body);   
-	    	*/
+		$this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>";*/
+	    /*
+	    $client_files_body = Array("");
+	    $this->template->client_files_body = Utils::load_client_files($client_files_body);   
+	    */
 
 		# Render the view
-	    	echo $this->template;
+	    echo $this->template;
 
 	} # End of method
 	

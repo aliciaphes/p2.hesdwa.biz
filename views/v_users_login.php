@@ -49,8 +49,10 @@
 				</div>
 			</div>
 		</form>
-		Not a user yet?
-		<button class="btn btn-primary" type="button">Let's fix that</button> 
+		<form class="form-horizontal" method='POST' action='/users/signup'>
+			Not a user yet?
+			<button class="btn btn-primary" type="submit">Let's fix that</button>
+		</form> 
 	</div>
 </div>
 </div>
