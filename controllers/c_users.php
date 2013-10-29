@@ -7,9 +7,9 @@ class users_controller extends base_controller {
 
     } 
 
-    public function index() {
-        echo "This is the index page";       
-    }
+    // public function index() {
+    //     echo "This is the index page";       
+    // }
 
     public function signup() {
         // echo "This is the signup page";
@@ -24,9 +24,10 @@ class users_controller extends base_controller {
     public function p_signup() {
         # Dump out the results of POST to see what the form submitted
         # for debugging purposes
-        echo '<pre>';
-        print_r($_POST);
-        echo '</pre>';  
+        
+        // echo '<pre>';
+        // print_r($_POST);
+        // echo '</pre>';  
 
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();
@@ -41,13 +42,16 @@ class users_controller extends base_controller {
         DB::instance(DB_NAME)->insert_row('users', $_POST);
 
         # You should eventually make a proper View for this
+
+            # Send them to the login page
+        //Router::redirect('/users/login');        
     }
 
 
     public function login() {
     # Setup view
         $this->template->content = View::instance('v_users_login');
-        $this->template->title   = "Login";
+        // $this->template->title   = "Login";
 
     # Render template
         echo $this->template;        
@@ -69,7 +73,7 @@ class users_controller extends base_controller {
     # Retrieve the token if it's available
         $q = "SELECT token 
         FROM users 
-        WHERE email = '".$_POST['email']."' 
+        WHERE email  = '".$_POST['email']."' 
         AND password = '".$_POST['password']."'";
 
         $token = DB::instance(DB_NAME)->select_field($q);
@@ -92,7 +96,7 @@ class users_controller extends base_controller {
         param 3 = when to expire
         param 4 = the path of the cooke (a single forward slash sets it for the entire domain)
         */
-        setcookie("token", $token, strtotime('+1 week'), '/');
+        setcookie("token", $token, strtotime('+1 year'), '/');
 
         # Send them to the main page - or whever you want them to go
         Router::redirect("/");

@@ -1,12 +1,13 @@
 <h1>Welcome to <?=APP_NAME?>
 	<?php
-	echo 'user = '.$user;
 	if($user){
-		echo ', '.$user->first_name; 
+		echo 'user = '.$user->first_name; 
 
-// Show list of posts and followers
+		echo 'Show list of posts and followers';
 
 	}else{	// redirect to login page
+		echo 'no user';
+		//please sign up or login
 		Router::redirect("/users/login/");
 	};
 	?>

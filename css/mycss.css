@@ -15,12 +15,14 @@ body{
 
 .loginarea{
 	padding: 15px;
-	margin: 5px;	
+	/*margin: 5px;*/	
 	background-color: #A27B2B;	
 	/*#734240*/
 
 }
 
 
+.login{padding-top: 65px;}
+.center{float: none; margin-left: auto; margin-right: auto;}
 
 
