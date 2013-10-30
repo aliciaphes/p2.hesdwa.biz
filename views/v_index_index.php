@@ -5,6 +5,8 @@
 
 		echo 'Show list of posts and followers';
 
+		Router::redirect("/users/profile/");
+
 	}else{	// redirect to login page
 		echo 'no user';
 		//please sign up or login
@@ -12,3 +14,5 @@
 	};
 	?>
 </h1>
+
+

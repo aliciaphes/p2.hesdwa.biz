@@ -1,22 +1,41 @@
 <h2>Sign Up<h2>
 
-	<form method='POST' action='/users/p_signup'>
+	<form method='POST' action='/users/p_signup' class="form-horizontal">
 		<!-- p for process POST information -->
+		<div class="control-group">
+			<label class="control-label" for="inputFirstName">First name</label>
+			<div class="controls">
+				<input type="text" id="inputFirstName" placeholder="First name" name='first_name' value='<?php if(isset($_POST['first_name'])) echo $_POST['first_name']?>'>
+			</div>
+		</div>
 
-		First Name<br>
-		<input type='text' name='first_name' value='<?php if(isset($_POST['first_name'])) echo $_POST['first_name']?>'><br>
+		<div class="control-group">
+			<label class="control-label" for="inputLastName">Last name</label>
+			<div class="controls">
+				<input type="text" id="inputLastName" name='last_name' placeholder="Last name" name='first_name'>
+			</div>
+		</div>
 
-		<br>
-		Last Name<br>
-		<input type='text' name='last_name'>
-		<br>
-		Email<br>
-		<input type='text' name='email'>
-		<br>
-		Password<br>
-		<input type='password' name='password'>
-		<br>
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">Email</label>
+			<div class="controls">
+				<input type="text" id="inputEmail" name='email' placeholder="Email">
+			</div>
+		</div>
 
-		<input type='submit' value='Sign up'>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Password</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" name='password' placeholder="Password">
+			</div>
+		</div>
 
-	</form>
+
+		<!-- sign up button: -->
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit"  value='Sign up' class="btn">Sign up</button>
+			</div>
+		</div>
+
+	</form>	

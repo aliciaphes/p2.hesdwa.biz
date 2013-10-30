@@ -29,7 +29,8 @@ class base_controller {
 		$client_files_head = Array('/css/mycss.css');
 		$this->template->client_files_head = Utils::load_client_files($client_files_head);
 		// $this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>";
-		
+		$this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>";
+		$this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>";
 	}
 	
 

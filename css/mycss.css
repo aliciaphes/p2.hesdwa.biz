@@ -1,7 +1,7 @@
 header{
 	background-color: #F0F2F1;
 	color: #D3B713;	
-	font-family: 'Andika', Helvetica, sans-serif;
+	/*font-family: 'ABeeZee', 'Montserrat', 'Andika', Helvetica, sans-serif;*/
 }
 
 
@@ -9,7 +9,9 @@ header{
 body{
 	background-color: #754541;	
 	color: #F0F2F1;		
-	font-family: 'Andika', Helvetica, sans-serif;
+	font-family: 'ABeeZee', 'Montserrat', 'Andika', Helvetica, sans-serif;
+	/*font-size: 16px;*/
+	font-size: 100%;
 }
 
 

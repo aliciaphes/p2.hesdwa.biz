@@ -12,7 +12,7 @@ class users_controller extends base_controller {
     // }
 
     public function signup() {
-        // echo "This is the signup page";
+
         # Setup view
         $this->template->content = View::instance('v_users_signup');
         $this->template->title = 'Sign up';
@@ -43,8 +43,8 @@ class users_controller extends base_controller {
 
         # You should eventually make a proper View for this
 
-            # Send them to the login page
-        //Router::redirect('/users/login');        
+        # Send them to the login page
+        Router::redirect('/users/login');        
     }
 
 
