@@ -1,8 +1,12 @@
-<?php foreach($posts as $post): ?>
+<?php
+
+if(count($posts) > 0){
+
+	foreach($posts as $post): ?>
 
 	<article>
 
-		<h1><?=$post['first_name']?> <?=$post['last_name']?> posted:</h1>
+		<h3><?=$post['first_name']?> <?=$post['last_name']?> posted:</h3>
 
 		<p><?=$post['content']?></p>
 
@@ -12,4 +16,10 @@
 
 	</article>
 
-<?php endforeach; ?>
+<?php endforeach;
+}else{
+	echo 'no users to follow!';?>
+	<!-- <button class="btn" type="submit" novalidate>Interact</button> -->
+<?php }
+
+?>

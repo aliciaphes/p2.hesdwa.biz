@@ -35,8 +35,10 @@ class posts_controller extends base_controller {
         DB::instance(DB_NAME)->insert('posts', $_POST);
 
 # Quick and dirty feedback
-        echo "Your post has been added. <a href='/posts/add'>Add another</a>";
+        // echo "Your post has been added. <a href='/posts/add'>Add another</a>";
 
+# Redirect to show oonga's      
+        Router::redirect("/posts");
     }
 
 
@@ -44,9 +46,9 @@ class posts_controller extends base_controller {
 
     # Set up the View
         $this->template->content = View::instance('v_posts_index');
-        $this->template->title   = "All Posts";
+        $this->template->title   = $this->user->first_name."'s oongas";
 
-        echo 'posts from '.$this->user->user_id;
+        // echo 'posts from '.$this->user->user_id;
 
     # Query
         $q = 'SELECT 
@@ -83,7 +85,8 @@ class posts_controller extends base_controller {
 
     # Build the query to get all the users
         $q = "SELECT *
-        FROM users";
+        FROM users
+        WHERE user_id <> ".$this->user->user_id;        
 
     # Execute the query to get all the users. 
     # Store the result array in the variable $users

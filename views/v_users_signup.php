@@ -1,4 +1,4 @@
-<h2>Sign Up<h2>
+<h2>Sign up<h2>
 
 	<form method='POST' action='/users/p_signup' class="form-horizontal">
 		<!-- p for process POST information -->
@@ -34,7 +34,7 @@
 		<!-- sign up button: -->
 		<div class="control-group">
 			<div class="controls">
-				<button type="submit"  value='Sign up' class="btn">Sign up</button>
+				<button type="submit"  value='Sign up' class="btn">Create account</button>
 			</div>
 		</div>
 
