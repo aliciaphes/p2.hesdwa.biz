@@ -1,18 +1,10 @@
-<h1>Welcome to <?=APP_NAME?>
-	<?php
-	if($user){
-		echo 'user = '.$user->first_name; 
 
-		echo 'Show list of posts and followers';
-
-		Router::redirect("/users/profile/");
-
-	}else{	// redirect to login page
-		echo 'no user';
-		//please sign up or login
-		Router::redirect("/users/login/");
-	};
-	?>
-</h1>
+<!-- This page is going to act purely as a 'routing page', depending if the user exists or not -->
+<?php
+if($user)
+	Router::redirect("/users/profile/");
+else
+	Router::redirect("/users/login/");
+?>
 
 

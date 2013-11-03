@@ -18,7 +18,7 @@
 	<div class="row-fluid">
 		<div class="span3 offset2"><br/>Welcome to this caveman-themed messaging application!<br/>Here you'll be able to post your 'oongas' (a.k.a grunt), interact with other cavemen and leave the cave when you're ready to evolve.<br/><br/>You'll have fun nomad-er what!
 		</div>          
-		<div class="span3 loginarea"><!-- classes, center and well as well -->
+		<div class="span3 loginarea" style="background-color:#004026; padding: 15px;"><!-- classes, center and well as well -->
 			<!-- <h4><legend>Please Sign In</legend></h4> -->
 			<h4>Please sign in</h4>
 			<form method="POST" action="/users/p_login">

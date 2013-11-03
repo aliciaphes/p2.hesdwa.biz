@@ -3,11 +3,13 @@
 
 
 <?php if(isset($user)): ?>
-	<h1>Your profile</h1>
 
 	<div class="container-fluid login">
+		
 		<div class="row-fluid">
-			<div class="span3 offset2">
+
+			<div class="span3 offset2" style="background-color:#601F08; padding: 15px;">
+				<h3>Your profile</h3>
 
 				<h6>First name: <?=$user->first_name?></h6>
 				<h6>Last name: <?=$user->last_name?></h6>

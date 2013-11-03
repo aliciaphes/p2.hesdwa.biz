@@ -164,17 +164,40 @@ public function profile($user_name = NULL) {
 
 }
 
-    public function edit() {
+public function edit() {
 # Setup view
-        $this->template->content = View::instance('v_users_edit');
-        $this->template->title   = "Profile";
+    $this->template->content = View::instance('v_users_edit');
+    $this->template->title   = "Profile";
 
 # Render template
-        echo $this->template;        
-    }
+    echo $this->template;        
+}
 
 
+public function p_edit() {
+# Sanitize the user entered data
+    $_POST = DB::instance(DB_NAME)->sanitize($_POST);
 
+        echo '<pre>';
+        print_r($_POST);
+        echo '</pre>'; 
+
+
+    $data = Array(
+        "first_name" => $_POST['first_name'],
+        "last_name"  => $_POST['last_name'],
+        "email"      => $_POST['email'],
+        // "password"   => $_POST['password'],
+        "modified"   => Time::now()
+        );
+
+    DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
+
+
+# Redirect to user's profile
+    Router::redirect('/users/profile');
+
+}
 
 
 } # end of the class

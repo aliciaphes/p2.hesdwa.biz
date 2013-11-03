@@ -11,14 +11,14 @@ if(count($users) > 0){ ?>
 
 
 
-		<div class="span3 offset2">
+		<div class="span2 offset2">
 			<!-- username -->
 			<?=$user['first_name']?> <?=$user['last_name']?>
 
 		</div>
 
 
-		<div class="span3 offset2">
+		<div class="span3">
 			<!-- buttons -->
 			<?php
 			#If there exists a connection with this user, show an unfollow button
