@@ -17,7 +17,7 @@ class base_controller {
 		
 		# Authenticate / load user
 		$this->user = $this->userObj->authenticate();					
-		
+
 		# Set up templates
 		$this->template 	  = View::instance('_v_template');
 		$this->email_template = View::instance('_v_email');			
@@ -41,9 +41,11 @@ class base_controller {
 
 
 		 # JS includes:
-		$client_files_body = Array("/js/bootstrap.min.js",
-								   "/js/jquery-1.10.2.min.js",
-								   "/js/effects.js");
+		$client_files_body = Array(
+								   // "/js/bootstrap.min.js",
+								   // "/js/jquery-1.10.2.min.js",
+								   // "/js/effects.js"
+								   );
         $this->template->client_files_body = Utils::load_client_files($client_files_body);		
 	}
 	

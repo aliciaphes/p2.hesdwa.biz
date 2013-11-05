@@ -1,4 +1,6 @@
 
+<?php if(isset($user->first_name)){ ?>
+
 <div class="container-fluid login">
 
 	<div class="row-fluid">
@@ -33,7 +35,8 @@
 
 
 </br>
-<button class="btn" type="submit">Update</button>
+<button class="btn" type="submit">Update</button></form>
 </div>
 </div>
 </div>
+<?php }else die("You're not allowed here!"); ?>

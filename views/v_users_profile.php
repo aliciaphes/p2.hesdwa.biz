@@ -1,26 +1,31 @@
 
 <!-- add php to the view only in case something has to be shown or not -->
 
+<!-- We do not need to check if the user is logged in because otherwise
+we would have been redirected to the login page -->
 
-<?php if(isset($user)): ?>
+
+<!-- <?php //if(isset($user->first_name;)): ?> -->
+
+
+
 
 	<div class="container-fluid login">
 		
 		<div class="row-fluid">
 
-			<div class="span3 offset2" style="background-color:#601F08; padding: 15px;">
+			<div class="span4 offset3" style="background-color:#004026; padding: 15px;">
 				<h3>Your profile</h3>
 
-				<h6>First name: <?=$user->first_name?></h6>
-				<h6>Last name: <?=$user->last_name?></h6>
-				<h6>Email: <?=$user->email?></h6>
+				First name: <?=$user->first_name?></br></br>
+				Last name: <?=$user->last_name?></br></br>
+				Email: <?=$user->email?></br></br>
 
 				<!-- Use Time::offset para calcular la diferencia horaria si el usuario la cambia -->
-				<h6>User creation date: <?=Time::display($user->created); ?></h6>
-				<h6>Last modified on: <?=Time::display($user->modified); ?></h6>
-				<h6>Last login on: <?=Time::display($user->last_login); ?></h6>
-				<h6>Time zone: <?=$user->timezone?></h6>
-
+				User creation date: <?=Time::display($user->created); ?></br></br>
+				Last modified on: <?=Time::display($user->modified); ?></br></br>
+				Last login on: <?=Time::display($user->last_login); ?></br></br>
+				Time zone: <?=$user->timezone?></br></br>
 
 
 				<form method="POST" action="/users/edit/">
@@ -32,7 +37,8 @@
 
 
 
-
-<?php else: ?>
-	<h1>No user has been specified</h1>
-<?php endif; ?>
+<!--
+<?php //else: 
+	//die('No user has been specified'); ?>
+<?php //endif; ?>
+-->

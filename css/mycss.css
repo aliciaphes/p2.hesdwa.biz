@@ -1,43 +1,56 @@
-/*header{
-	background-color: #F0F2F1;
-	color: #D3B713;	
-}*/
-
-
-/*.active{
-	background-color: red;
-	color: red;	
-}*/
-
-
-/*body{
-	background-color: #754541;	
-	color: #F0F2F1;		
-	font-family: 'Lora','ABeeZee', 'Montserrat', 'Andika', Helvetica, sans-serif;
-	/*font-size: 16px;*/
-	/*font-size: 100%;
-}*/
 
 body {
 /*	background-image:url('/img/caveman6.jpg');
 	background-repeat:no-repeat;
-	background-position:right bottom;*/	
+	background-position:right bottom;
+font-family: 'Lora','ABeeZee', 'Montserrat', 'Andika', Helvetica, sans-serif;
+/*font-size: 16px;*/
+	/*font-size: 100%;
+	*/	
 
 	background-color: #00AD68;
 	color: white;
 }
 
+.info{
+	text-align:justify;
+}
 
-/*.loginarea{
-	padding: 15px;*/
-	/*margin: 5px;*/	
-	/*background-color: #A27B2B;	
-	#734240
+.error{
+	color: red;
+}
 
+.post{
+	border: 2px solid;
+	border-radius: 25px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+/*a .top:hover, .top:visited, .top:link, .top:active{
+	
+    text-decoration: none;
 }*/
+a.top:hover, a.top:visited, a.top:link, a.top:active {
+	color: #FFFFFF;
+    text-decoration:none;
+}
 
+.gototop{
+	border: 1px solid white;
+	text-align: center;
+}
 
+textarea{
+	resize: none;
+	overflow: hidden;
+}
 
+footer {
+    text-align: right;
+}
 
 /*.login{padding-top: 65px;}
 .center{float: none; margin-left: auto; margin-right: auto;}*/

@@ -4,7 +4,7 @@
 if($user)
 	Router::redirect("/users/profile/");
 else
-	Router::redirect("/users/login/");
+	Router::redirect("/users/login/");		
 ?>
 
 

@@ -5,9 +5,10 @@ class posts_controller extends base_controller {
         parent::__construct();
 
 # Make sure user is logged in if they want to use anything in this controller
-        if(!$this->user) {
+/*        if(!$this->user) {
             die("Members only. <a href='/users/login'>Login</a>");
-        }
+        }*/
+        Router::redirect('/users/login');
     }
 
     public function add() {
@@ -81,7 +82,7 @@ class posts_controller extends base_controller {
 
     # Set up the View
         $this->template->content = View::instance("v_posts_users");
-        $this->template->title   = "Users";
+        $this->template->title   = "Cavemen";
 
     # Build the query to get all the users
         $q = "SELECT *

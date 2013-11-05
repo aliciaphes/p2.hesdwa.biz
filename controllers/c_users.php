@@ -55,10 +55,13 @@ class users_controller extends base_controller {
     }
 
 
-    public function login() {
+    public function login($error = NULL) {
 # Setup view
         $this->template->content = View::instance('v_users_login');
         $this->template->title   = "Welcome!";
+
+# Pass data to the view
+        $this->template->content->error = $error;
 
 # Render template
         echo $this->template;        
@@ -71,28 +74,28 @@ class users_controller extends base_controller {
     public function p_login() {
 
 # Sanitize the user entered data to prevent any funny-business (re: SQL Injection Attacks)
-        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
+       $_POST = DB::instance(DB_NAME)->sanitize($_POST);
 
 # Hash submitted password so we can compare it against one in the db
-        $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+       $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 
 # Search the db for this email and password
 # Retrieve the token if it's available
-        $q = "SELECT token 
-        FROM users 
-        WHERE email  = '".$_POST['email']."' 
-        AND password = '".$_POST['password']."'";
+       $q = "SELECT token 
+       FROM users 
+       WHERE email  = '".$_POST['email']."' 
+       AND password = '".$_POST['password']."'";
 
-        $token = DB::instance(DB_NAME)->select_field($q);
+       $token = DB::instance(DB_NAME)->select_field($q);
 
 # If we didn't find a matching token in the database, it means login failed
-        if(!$token) {
+       if(!$token) {
 
-# Send them back to the login page
-            Router::redirect("/users/login/");
+        # Send error and redirect to login page
+           Router::redirect("/users/login/error");
 
 # But if we did, login succeeded! 
-        } else {
+       } else {
 
 /* 
 Store this token in a cookie using setcookie()
@@ -178,9 +181,9 @@ public function p_edit() {
 # Sanitize the user entered data
     $_POST = DB::instance(DB_NAME)->sanitize($_POST);
 
-        echo '<pre>';
-        print_r($_POST);
-        echo '</pre>'; 
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>'; 
 
 
     $data = Array(

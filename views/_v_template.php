@@ -10,8 +10,9 @@
 </head>
 
 <body>	
+	<a name="top"></a>
 
-<?php if($user): ?>
+	<?php if($user): ?>
 	<!-- <div class="container"> -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -45,11 +46,11 @@
 <header>
 	<h2>
 		<a href="http://www.flickr.com/photos/gareth_james_fi/9444253550/" title="Click for the original Flickr image" target="_blank"><img src="/img/caveman6.jpg" alt="Maybe this loading is as slow as a caveman"></a>
-		Oonga Oonga
+		Oonga Oonga&nbsp;&nbsp;//&nbsp;&nbsp;Be part of the...club
 	</h2>
 	<!-- <p class="tagline">Be part of the...club</p> -->
 	<!-- <p><h3>Be part of the...club</h3></p> -->
-	<h3>Be part of the...club</h3>
+	<!-- <h3>Be part of the...club</h3> -->
 </header>
 
 
@@ -59,8 +60,9 @@
 <?php if(isset($client_files_body)) echo $client_files_body; ?>
 
 <footer>
-     <!-- <p>&#169; Fall 2013 <a href="#">alipe</a></p> -->
-     <p>&#169; Fall 2013 alipe</p>
+	<!-- <p>&#169; Fall 2013 <a href="#">alipe</a></p> -->
+	<p>&#169; Fall 2013 ALicia Perez</p>
 </footer>
+<p class="gototop"><a class="top" href="#top">Back to top</a></p>
 </body>
 </html>
