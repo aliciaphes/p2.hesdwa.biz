@@ -23,7 +23,7 @@
 				<div class="control-group">
 					<label class="control-label" for="inputLastName">Last name</label>
 					<div class="controls">
-						<input type="text" id="inputLastName" name='last_name' placeholder="Last name" name='first_name'>
+						<input type="text" id="inputLastName" name='last_name' placeholder="Last name">
 					</div>
 				</div>
 
