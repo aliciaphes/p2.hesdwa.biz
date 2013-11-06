@@ -45,7 +45,7 @@
 										<?=$user->first_name?> <?=$user->first_name?> posted:
 									</h4>
 
-									<i><time datetime="<?=Time::display($mypost['created'],'Y-m-d G:i')?>">
+									<i><time datetime="<?=Time::display($mypost['created'],'Y-m-d H:i')?>">
 										on <?= Time::display($mypost['created']) ?>:
 									</time></i>
 									<p><?=$mypost['content']?></p>

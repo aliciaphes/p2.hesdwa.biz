@@ -13,7 +13,7 @@
 				
 				<article>
 					<h4 class='underline'><?=$post['first_name']?> <?=$post['last_name']?> posted:</h4>
-					<i><time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
+					<i><time datetime="<?=Time::display($post['created'],'Y-m-d H:i')?>">
 						on <?= Time::display($post['created']) ?>:
 					</time></i>
 					<p><?=$post['content']?></p>
