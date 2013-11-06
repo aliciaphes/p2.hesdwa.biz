@@ -10,7 +10,7 @@
 </head>
 
 <body>	
-	<a name="top"></a>
+	<a id="top"></a>
 
 	<?php if($user): ?>
 
