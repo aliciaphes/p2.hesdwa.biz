@@ -19,7 +19,7 @@
 			<div class="navbar-inner">
 				<div class='container'>
 
-					<a class="brand"><?php if(defined('APP_NAME')) echo APP_NAME;?></a>
+					<a class="brand"><?php if(defined('APP_NAME')) echo APP_NAME.'-'.$user->first_name.' '.$user->last_name;?></a>
 
 					<ul class="nav nav-pills">
 						<li><a title='Home' href='/'>Cave</a></li>	
