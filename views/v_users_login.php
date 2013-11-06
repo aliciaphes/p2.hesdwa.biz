@@ -34,7 +34,7 @@
 			<?php if(isset($error) && $error=='error'): ?>
 				<div class='alert alert-error'>	
 					<strong>The specified combination email/password does not exist. Please try again.</strong>
-				</br>
+				<br/>
 				</div>
 				
 			<?php endif;
@@ -42,7 +42,7 @@
 			if(isset($error) && $error=='wrong_email'): ?>
 				<div class='alert alert-error'>	
 					<strong>Wrong format in email address. Please correct.</strong>
-				</br>
+				<br/>
 				</div>
 			<?php endif; ?>
 
@@ -52,7 +52,7 @@
 
 			$signup->open('signupform', "/users/signup", NULL, 'POST');
 			?>
-			Not a caveman yet?</br>
+			Not a caveman yet?<br/>
 			<button class="btn" type="submit">Let's fix that</button>
 			</form>
 		</div>

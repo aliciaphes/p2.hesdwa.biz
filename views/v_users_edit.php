@@ -15,7 +15,7 @@
 				$profile->open('form', "/users/p_edit", NULL, 'POST');
 				?>
 
-				<h3><?php echo "Edit your profile"; ?></h3></br>
+				<h3><?php echo "Edit your profile"; ?></h3><br/>
 				<label>First name</label>
 				<?php $info = $user->first_name; ?>
 				<input type="text" name="first_name" value="<?php echo $info; ?>" placeholder="First name">
@@ -24,7 +24,7 @@
 				<label>Last name</label>
 				<?php $info = $user->last_name; ?>
 				<input type="text" name="last_name" value="<?php echo $info; ?>" placeholder="Last name">
-				</br>
+				<br/>
 				<button class="btn" type="submit">Update</button>
 				</form>
 				

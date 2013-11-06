@@ -11,7 +11,7 @@
 		$login = new Form();
 		$login->open('loginform', "/users/login", NULL, 'POST');
 		?>
-		</br>
+		<br/>
 		<button class="btn" type="submit">Start grunting!</button>
 		</form>
 

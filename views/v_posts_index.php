@@ -28,7 +28,7 @@
 	<div class="span3 offset3 oongabox">
 		
 		<?php
-			echo 'No cavemen to grunt with!';?></br></br>
+			echo 'No cavemen to grunt with!';?><br/><br/>
 
 			<?php
 
