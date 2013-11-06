@@ -42,7 +42,7 @@
 
 								<article>
 									<h4 class='underline'>
-										<?=$user->first_name?> <?=$user->first_name?> posted:
+										<?=$user->first_name?> <?=$user->last_name?> posted:
 									</h4>
 
 									<i><time datetime="<?=Time::display($mypost['created'],'Y-m-d H:i')?>">
