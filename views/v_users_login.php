@@ -24,8 +24,8 @@
 
 			$login->open('loginform', "/users/p_login", NULL, 'POST');
 			?>
-			<input type="text" class="clearfix" name="email" placeholder="Email" required/><br/>
-			<input type="password" class="clearfix" name="password" placeholder="Password" required/><br/>
+			<input type="text" class="clearfix input-block-level" name="email" placeholder="Email" required/><br/>
+			<input type="password" class="clearfix input-block-level" name="password" placeholder="Password" required/><br/>
 			<button id="loginButton" class="btn" type="submit">Log in</button><br/>
 			</form>  
 

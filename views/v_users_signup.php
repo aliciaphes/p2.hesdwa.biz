@@ -16,28 +16,28 @@
 				<div class="control-group">
 					<label class="control-label" for="inputFirstName">First name</label>
 					<div class="controls">
-						<input type="text" id="inputFirstName" placeholder="First name" name='first_name' required>
+						<input class="input-block-level" type="text" id="inputFirstName" placeholder="First name" name='first_name' required>
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="inputLastName">Last name</label>
 					<div class="controls">
-						<input type="text" id="inputLastName" name='last_name' placeholder="Last name">
+						<input class="input-block-level" type="text" id="inputLastName" name='last_name' placeholder="Last name">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="inputEmail">Email</label>
 					<div class="controls">
-						<input type="text" id="inputEmail" name='email' placeholder="Email" required>
+						<input class="input-block-level" type="text" id="inputEmail" name='email' placeholder="Email" required>
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="inputPassword">Password</label>
 					<div class="controls">
-						<input type="password" id="inputPassword" name='password' placeholder="Password" required>
+						<input class="input-block-level" type="password" id="inputPassword" name='password' placeholder="Password" required>
 					</div>
 				</div>
 
