@@ -60,7 +60,10 @@ class users_controller extends base_controller {
             else{
                 # Brand new user, correct POST data
                 # Last/first name, email and password are retrieved from the form.
-                # We set the rest of the DB fields:
+                # We set the rest of the DB fields (previously sanitizing):
+
+                $_POST = DB::instance(DB_NAME)->sanitize($_POST);
+
                 $_POST['created']  = Time::now();
                 $_POST['modified'] = Time::now();
                 $_POST['timezone'] = TIMEZONE;
