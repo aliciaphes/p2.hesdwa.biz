@@ -8,7 +8,7 @@ class base_controller {
 	public $email_template;
 
 	/*-------------------------------------------------------------------------------------------------
-
+		Base constructor of our controllers
 	-------------------------------------------------------------------------------------------------*/
 	public function __construct() {
 		
@@ -28,28 +28,17 @@ class base_controller {
 		 # CSS includes:
 		$client_files_head = Array('/css/bootstrap.min.css',
 								   '/css/bootstrap-responsive.min.css',
-								   '/css/mycss.css');
+								   '/css/oongacss.css');
 		$this->template->client_files_head = Utils::load_client_files($client_files_head);
 
 
-		//$this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>";
+		$this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>";
 		
-		// $this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>";
-		
-		// $this->template->client_files_head .= "<link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>";
-
-
 
 		 # JS includes:
-		$client_files_body = Array(
-								   // "/js/bootstrap.min.js",
-								   // "/js/jquery-1.10.2.min.js",
-								   // "/js/effects.js"
-								   );
+		$client_files_body = Array();
         $this->template->client_files_body = Utils::load_client_files($client_files_body);		
 	}
 	
-
-	/**once your system has the ability to log in users, you don't want to repeat yourself in every Controller, checking to see if a user is logged in. Instead, you can do this action here in the base Controller.*/
 
 } # eoc

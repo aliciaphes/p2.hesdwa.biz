@@ -1,19 +1,23 @@
 
-<!-- add php to the view only in case something has to be shown or not -->
+<!-- This is the view where the user will access the application -->
 
+<div class="container-fluid">
 
-<!-- <section> -->
-<div class="container-fluid info">
 	<div class="row-fluid">
-		<div class="span3 offset2"><br/>Welcome to this caveman-themed messaging application!<br/>Here you'll be able to post your 'oongas' (a.k.a grunt), interact with other cavemen and leave the cave when you're ready to evolve.<br/><br/>You'll have fun nomad-er what!
-		</div>          
-		<div class="span3 loginarea" style="background-color:#004026; padding: 15px;"><!-- classes, center and well as well -->
-			<!-- <h4><legend>Please Sign In</legend></h4> -->
-			<h4>Please sign in</h4>
 
-			<!-- 			<?php if(isset($message)) echo '<div class="message">'.$message.'</div>'; ?> -->
+		<div class="span3 offset2 justified"><br/>Welcome to this caveman-themed messaging application!<br/>Here you'll be able to post your 'oongas' (a.k.a grunt), interact with other cavemen and leave the cave when you're ready to evolve.<br/><br/>You'll have fun nomad-er what!<br/><br/>
+			+1 features:
+			<ul>
+				<li>Delete logged user's full history</li>	
+				<li>Edit logged user's information</li>
+			</ul>
+		</div> 
 
 
+         
+		<div class="span3 oongabox">
+
+			<h3>Please sign in</h3>
 
 			<?php
 			$login = new Form();
@@ -22,36 +26,37 @@
 			?>
 			<input type="text" class="clearfix" name="email" placeholder="Email" required/><br/>
 			<input type="password" class="clearfix" name="password" placeholder="Password" required/><br/>
-			<button class="btn" type="submit">Log in</button><br/></form>  
+			<button id="loginButton" class="btn" type="submit">Log in</button><br/>
+			</form>  
 
-			<?php if(isset($error)): ?>
-			<div class='error'>
-				The specified combination email/password does not exist. Please try again.
-			</div>
-			<br>
-		<?php endif; ?>
+			<!-- Show error messages in case of incorrect login: -->
+			
+			<?php if(isset($error) && $error=='error'): ?>
+				<div class='alert alert-error'>	
+					<strong>The specified combination email/password does not exist. Please try again.</strong>
+				</br>
+				</div>
+				
+			<?php endif;
 
-		<?php
-		$signup = new Form();
-
-		$signup->open('signupform', "/users/signup", NULL, 'POST');
-		?>
-		Not a caveman yet?
-		<button class="btn" type="submit">Let's fix that</button>
-	</form>
+			if(isset($error) && $error=='wrong_email'): ?>
+				<div class='alert alert-error'>	
+					<strong>Wrong format in email address. Please correct.</strong>
+				</br>
+				</div>
+			<?php endif; ?>
 
 
-<!-- 			<form method="POST" action="/users/p_login">
-				<input type="text" class="clearfix" name="email" placeholder="Email" /><br/>
-				<input type="password" class="clearfix" name="password" placeholder="Password" /><br/><br/>
-				<button class="btn" type="submit">Log in</button>     
+			<?php
+			$signup = new Form();
+
+			$signup->open('signupform', "/users/signup", NULL, 'POST');
+			?>
+			Not a caveman yet?</br>
+			<button class="btn" type="submit">Let's fix that</button>
 			</form>
-			<form action="/users/signup/">
-				Not a caveman yet?
-				<button class="btn" type="submit">Let's fix that</button>
-			</form> -->
 		</div>
 	</div>
 </div>
-<!-- </section> -->
+
 
